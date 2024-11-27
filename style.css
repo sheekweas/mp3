@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('./assets/img/background.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#player-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    padding-top: 30px;
+}
+
+.input-file-row {
+	display: inline-block;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color: rgb(20, 20, 20);
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.input-file input[type=file]:focus + span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover/Active */
+.input-file:hover span {
+	background-color: rgb(32, 32, 32);
+}
+.input-file:active span {
+	background-color: rgb(20, 20, 20);
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+ 
+/* Список файлов */
+.input-file-list {
+	padding: 10px 0;
+}
+.input-file-list-item {
+	margin-bottom: 10px;
+}
+.input-file-list-remove {
+	color: red;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgb(103, 103, 200);
+    color: white;
+    font-style: 16px;
+    border: none;
+    transition: all ease 0.7s;
+}
+
+button:hover {
+    padding: 10px 20px;
+    background: rgb(78, 78, 147);
+    color: white;
+    font-style: 16px;
+    border: none;
+}
+
+#playlist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 14px;
+    height: 300px;
+    overflow: scroll;
+    backdrop-filter: blur(10px);
+}
+
+
+
+#playlist::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+#playlist::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+
+audio::-webkit-media-controls-panel {
+    background-color: #1d2730;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #5d828e;
+    border-radius: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }

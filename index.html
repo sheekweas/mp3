@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Плеер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="player-container">
+        <audio id="audio-player" controls></audio>
+        <form method="post" enctype="multipart/form-data">
+            <div class="input-file-row">
+                <label class="input-file">
+                    <input type="file" name="file[]" id="file-input" accept=".mp3" multiple>
+                    <span>Выберите файл</span>
+                </label>
+                <div class="input-file-list"></div>
+            </div>
+        </form>
+        <div class="controls">
+            <button onclick="playPause()">Воспроизвести/Пауза</button>
+            <button onclick="playPrev()">Предыдущий</button>
+            <button onclick="playNext()">Следующий</button>
+        </div>
+
+        <ul id="playlist"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
